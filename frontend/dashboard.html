@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Dashboard</h1>
+        <button id="logout">Cerrar Sesión</button>
+        <div id="user-list">
+            <h2>Lista de Usuarios</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Nombre</th>
+                        <th>Email</th>
+                        <th>Rol</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody id="users-body"></tbody>
+            </table>
+        </div>
+        <div id="user-form">
+            <h2>Editar Usuario</h2>
+            <form id="edit-form">
+                <input type="hidden" id="edit-id">
+                <input type="text" id="edit-nombre" placeholder="Nombre" required>
+                <input type="email" id="edit-email" placeholder="Correo" required>
+                <select id="edit-role">
+                    <option value="user">Usuario</option>
+                    <option value="admin">Admin</option>
+                </select>
+                <p id="edit-error" style="color: red;"></p>
+                <button type="submit">Guardar Cambios</button>
+            </form>
+        </div>
+    </div>
+    <script src="dashboard.js"></script>
+</body>
+</html>
