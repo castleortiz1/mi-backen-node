@@ -16,6 +16,7 @@ db.json
 
 # Directorio de carga de archivos
 public/uploads
+package-lock.json
 
 # Sistemas operativos
 .DS_Store
